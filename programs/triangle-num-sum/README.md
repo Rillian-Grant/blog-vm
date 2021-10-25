@@ -33,7 +33,7 @@ mov res r02         .0F82
 add r02 r03         .4043
 mov res r03         .0F83
                     .
-imp 6               .8007       // Address 1 before because it's incremented afterwards
+imp 6               .8006       // Address 1 before because it's incremented afterwards
 mov res adr         .0F9E
 cmp r02 r09         .2049
 jlt                 .3000

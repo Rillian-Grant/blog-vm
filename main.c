@@ -4,7 +4,6 @@
 #include<stdio.h>
 #include<inttypes.h>
 
-#define DEBUG 1
 #ifndef DEBUG
 #define DEBUG 0
 #endif
@@ -196,6 +195,12 @@ int main(int argc, char *argv[]) {
         debug_print("ctr: %d\n", *rams.ctr);
         debug_print("adr: %d\n", *rams.adr);
         debug_print("res: %d\n", *rams.res);
+
+        #if DEBUG != 0 
+        printf("\n\nHit enter to continue> ");
+        getchar();
+        printf("\n");
+        #endif
 
         // TODO Make it so if jump is called this is one less. Maybe change jump to jump - 1 in that function
         *rams.ctr = *rams.ctr + 1;
