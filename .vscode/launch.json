@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": ["init_mem.bin"],
+            "args": ["programs/triangle-num-sum/program.bin"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
