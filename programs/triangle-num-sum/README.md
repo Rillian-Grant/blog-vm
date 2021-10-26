@@ -1,6 +1,6 @@
 # Sum of triangle numbers up to a given number
 
-Note: I use r01 as my first register because i forgot that r00 existed
+Note: I use r01 as my first register because I forgot that r00 existed
 
 ```
 /*
@@ -33,7 +33,7 @@ mov res r02         .0F82
 add r02 r03         .4043
 mov res r03         .0F83
                     .
-imp 6               .8006       // Address 1 before because it's incremented afterwards
+imp 7               .8007
 mov res adr         .0F9E
 cmp r02 r09         .2049
 jlt                 .3000

@@ -1,11 +1,13 @@
 #ifndef FILE_TYPES_INCLUDED
 #define FILE_TYPES_INCLUDED
 
+#include "debug.h"
 #include "instructions.h"
 
 #include<inttypes.h>
 #include<stdlib.h>
 
+// Pointers with human readable names for each register and a pointer to the entire array of registers
 struct RegistersAddressMapStruct {
     uint16_t *ctr;
     uint16_t *adr;
@@ -25,6 +27,7 @@ struct RegistersAddressMapStruct {
     uint16_t *reg_array;
 };
 
+// Create a struct and set the pointers to values in the passed array with indexes corresponding to the register's id numbers
 struct RegistersAddressMapStruct createRegistersAddressMap(uint16_t registers[]) {
     struct RegistersAddressMapStruct r;
 
@@ -47,6 +50,7 @@ struct RegistersAddressMapStruct createRegistersAddressMap(uint16_t registers[])
     return r;
 }
 
+// Failed attempt to create a mapping between opcodes and pointers to the instruction functions
 /*
 static void (* const opcode_table[64]) (uint16_t arg1, uint16_t arg2, struct RegistersAddressMapStruct *registers, uint16_t *mem) = {
     slp,
