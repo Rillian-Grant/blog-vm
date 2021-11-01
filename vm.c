@@ -212,7 +212,6 @@ int main(int argc, char *argv[]) {
         #endif
 
         // Increment the program counter
-        // TODO Make it so if jump is called this is one less. Maybe change jump to jump - 1 in that function
         *rams.ctr = *rams.ctr + 1;
     }
     debug_print("System Halted\n");
